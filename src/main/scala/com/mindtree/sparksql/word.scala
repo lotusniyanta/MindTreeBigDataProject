@@ -24,7 +24,6 @@ print("***************************************Explode Example1******************
       withColumn("Code",$"tn.code").withColumn("Name",$"tn.name").
       withColumn("Id",monotonicallyIncreasingId()).
       select($"Id",$"Code",$"Name")
-
     print("*************************************** Explode Example2*********************************")
     println("")
   val df2 = df.withColumn("tn1",explode($"theme_namecode")).

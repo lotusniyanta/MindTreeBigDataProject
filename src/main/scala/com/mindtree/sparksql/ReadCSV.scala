@@ -16,9 +16,6 @@ object ReadCSV {
     val df = spark.read.format(("csv")).option("header","true").load(data)
     df.show(false)
     //df.printSchema()
-
-
-
     //---------------------------------------------------
     spark.stop()
     //Start Streaming
